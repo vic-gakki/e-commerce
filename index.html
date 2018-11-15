@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>乐淘商城</title>
+</head>
+<body>
+    <!--首页内容-->
+    <div class="ct_container">
+        <header class="ct_header">
+            <h3>乐淘购</h3>
+            <a href="search.html" class="right"><span class="fa fa-search"></span></a>
+        </header>
+        <div class="ct_content">
+            <div class="ct_wrapper">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                       <!--图片轮播模块-->
+                        <div class="mui-slider">
+                            <div class="mui-slider-group mui-slider-loop">
+                                <!-- mui-slider-item-duplicate 可以实现无缝轮播效果 -->
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#"><img src="images/banner4.png" alt=""></a>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <a href="#"><img src="images/banner1.png" alt=""></a>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <a href="#"><img src="images/banner2.png" alt=""></a>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <a href="#"><img src="images/banner3.png" alt=""></a>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <a href="#"><img src="images/banner4.png" alt=""></a>
+                                </div>
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#"><img src="images/banner1.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                            </div>
+                        </div>
+                        <!--导航模块-->
+                        <nav class="ct_nav mui-clearfix">
+                            <a href="#"><img src="images/nav1.png" alt=""></a>
+                            <a href="#"><img src="images/nav2.png" alt=""></a>
+                            <a href="#"><img src="images/nav3.png" alt=""></a>
+                            <a href="#"><img src="images/nav4.png" alt=""></a>
+                            <a href="#"><img src="images/nav5.png" alt=""></a>
+                            <a href="#"><img src="images/nav6.png" alt=""></a>
+                        </nav>
+                        <!--商品-->
+                        <div class="ct_product mui-clearfix">
+                            <!-- 数据渲染区域 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ct_footer">
+            <a class="tab_home fa fa-home now" href="/index.html"><span>首页</span></a>
+            <a class="tab_cate fa fa-bars" href="/category.html"><span>分类</span></a>
+            <a class="tab_cart fa fa-shopping-cart" href="/user/cart.html"><span>购物车</span></a>
+            <a class="tab_user fa fa-user" href="/user/index.html"><span>会员中心</span></a>
+        </footer>
+    </div>
+<script type="text/html" id="productTpl">
+    <% for(var i = 0 ; i < data.length ; i ++){ %>
+    <% var item = data[i]; %>
+    <div class="pro_item">
+        <a href="product.html?productId=<%=item.id%>" class="pro_item_box">
+            <img src="<%=item.pic[0].picAddr%>" alt="">
+            <!--mui-ellipsis-2两行省略  mui-ellipsis 一行省略 -->
+            <p class="mui-ellipsis-2"><%=item.proName %> </p>
+            <p><span class="nowPrice">&yen;<%=item.price %></span> <span class="oldPrice">&yen;<%=item.oldPrice %></span></p>
+            <button class="button">立即购买</button>
+        </a>
+    </div>
+    <% } %>
+</script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

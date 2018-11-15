@@ -1,0 +1,10 @@
+{
+	"rows":[
+		{"id":1,"categoryName":"运动馆"},
+		{"id":2,"categoryName":"女士馆"},
+		{"id":3,"categoryName":"男士馆"},
+		{"id":4,"categoryName":"户外馆"},
+		{"id":5,"categoryName":"帆布馆"},
+	],
+	"total":5
+}
